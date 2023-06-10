@@ -18,3 +18,4 @@ Immerse yourself in the world of coffee with our educational resources. Our webs
 4. Events and Community
 Stay connected with the Bean-BrewCup community by checking our website for upcoming events, workshops, and tastings. We regularly host coffee-related events that provide opportunities for enthusiasts to engage with our passionate team and fellow coffee lovers. From latte art competitions to cupping sessions, our events calendar is your guide to staying involved in the vibrant coffee community we've cultivated.
 
+![Untitled Workspace](https://github.com/romylomy/Bean-BrewCup-/assets/115190653/de45e683-d5d0-4e71-95e3-02c3ac63a16d)
