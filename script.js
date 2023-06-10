@@ -2,6 +2,7 @@ const buttonsContainer = document.querySelector('.icons');
 const navBar = document.querySelector('.navbar');
 const cartItem = document.querySelector('.cart-items-container');
 const searchForm = document.querySelector('.search-form');
+const addToCart  = document.querySelector('addToCart')
 
 const findIconClicked = (event) => {
   const target = event.target.id;
@@ -30,38 +31,37 @@ const findIconClicked = (event) => {
 
 buttonsContainer.addEventListener('click', findIconClicked);
 
-const people = [
-  {name:'Sally', lastName:'Sand', age: 42},
-  {name:'kyle', lastName:'Marie', age: 26},
-  {name:'John', lastName:'Cena',  age: 31},
-  {name:'Jill', lastName:'Sanders', age: 42}
-]; 
-
-const result = people.reduce((groupedPeople,person ) => {
-  console.log(groupedPeople)
-  const age = person.age 
-  if(groupedPeople[age]== null)
-    groupedPeople[age] = []
-    groupedPeople[age].push(person.name.concat(" " + person.lastName))
-  return groupedPeople 
-}, {} ) 
-
-console.log(result)
-
-const arrayMethod = [1, 2, 4, 591, 392, 391, 2, 5, 10, 2, 1, 1, 1, 20, 20];
-
-const groupedArrays = arrayMethod.reduce((groups, value) => {
-  const foundGroup = groups.find(group => group.includes(value));
-  if (foundGroup) {
-    foundGroup.push(value);
-  } else {
-    groups.push([value]);
-  }
-  return groups;
-}, []);
-
-console.log(groupedArrays);
+const cart = [
+  {
+    title:"coco nut ", 
+    price: 15.99,
+    amount: 1,
+  },
+  {
+    title:"Matchacha ", 
+    price: 15.99,
+    amount: 2,
+  },
+  {
+    title:"Very Berry ", 
+    price: 15.99,
+    amount: 3,
+  },
+]
 
 
-
+let total = cart.reduce((total, cartItem) => {
+  //count items 
+  const {amount, price} = cartItem;
+  total.totalItems += amount 
+  // count sum
+  total.cartTotal = amount * price 
+  return total
+}, 
+{
+  totalItems: 0,
+  cartTotal: 0,
+}
+) 
+ 
 
