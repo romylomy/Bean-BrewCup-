@@ -30,6 +30,8 @@ const findIconClicked = (event) => {
 }
 
 buttonsContainer.addEventListener('click', findIconClicked);
+ 
+
 
 const cart = [
   {
